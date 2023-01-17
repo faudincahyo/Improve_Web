@@ -66,9 +66,16 @@ class ProductController extends Controller
         $imageName = time() . '.' . $request->image->extension();
 
         # gunakan query untuk update data baru kedalam database dengan memanggil model product
-
+        
         # awal query
-
+        Product::create([
+            'title' => $request->title,
+            'harga' => $request->harga,
+            'image' => $imageName,
+            'status' => $request->status,
+            'desc' => $request->desc,
+            'slug' => $request->title,
+        ]);
         # akhir query
 
         # menentukan folder mana yang akan menyimpan gambar hasil upload kita
@@ -152,7 +159,13 @@ class ProductController extends Controller
             # gunakan query untuk update data baru kedalam database dengan memanggil model product
 
             # awal query
-
+            $data->update([
+                'title' => $request->title,
+                'harga' => $request->harga,
+                'image' => $imageName,
+                'status' => $request->status,
+                'desc' => $request->desc,
+            ]);
             # akhir query
 
             # menentukan folder mana yang akan menyimpan gambar hasil upload kita
@@ -163,7 +176,12 @@ class ProductController extends Controller
             # jika tidak ada request image maka memanggil query update dengan model
 
             # awal query
-
+            $data->update([
+                'title' => $request->title,
+                'harga' => $request->harga,
+                'status' => $request->status,
+                'desc' => $request->desc,
+            ]);
             # akhir query
         }
 
@@ -194,7 +212,7 @@ class ProductController extends Controller
         # gunakan query delete orm untuk menghapus data pada tabel
 
         # awal query
-
+        $data->delete();
         # akhir query
 
         # kembalikan hasil controller ini ke halaman list product

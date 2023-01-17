@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Backend\Product;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 class HomeController extends Controller
 {
     /**
@@ -12,9 +16,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
-        return view('frontend.home.index');
+ 
+            $product = product::paginate(8);
+            $product = DB::table('products')->get();
+            return view('frontend.home.index', compact('product'));
     }
+
+    public function adminHome()
+    {
+        return view('layouts.backend.master');
+    }
+    // MASIH COBA-COBA BUAT MULTIPLE USER
+    // public function indexHome()
+    // {
+    //     return view('backend.index');
+    // }
 
     /**
      * ini adalah function untuk seluruh product
@@ -22,7 +38,6 @@ class HomeController extends Controller
      */
     public function product()
     {
-        //
         return view('frontend.product.index');
     }
 
@@ -32,8 +47,9 @@ class HomeController extends Controller
      */
     public function detail($slug)
     {
-        //
-        return view('frontend.product.detail');
+        $product = Product::where('slug', $slug)->first();
+
+        return view('frontend.product.detail', compact('product', $product));
     }
 
     /**

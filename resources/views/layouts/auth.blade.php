@@ -23,7 +23,8 @@
     </div>
     <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
-
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="{{ asset('assets/js/signin.js') }}"></script>
 </body>
 
 </html>

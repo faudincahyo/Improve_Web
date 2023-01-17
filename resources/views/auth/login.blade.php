@@ -53,7 +53,7 @@
             <div class="divider">
                 <div class="divider-text">OR</div>
             </div>
-            <a href="" class="text-center">
+            <a href="{{ route('google.login') }}" class="text-center" id="results">
                 <img src="{{ asset('assets/auth_google.png') }}" width="200" alt="">
             </a>
         </div>
