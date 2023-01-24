@@ -31,10 +31,10 @@ class GoogleController extends Controller
                 Auth::login($finduser, true);
                 $role=Auth::user()->role;
 
-                if($role == '1'){
+                if($role == 'admin'){
                     return redirect()->route('dashboard');
                 }else{
-                    return redirect()->back();
+                    return redirect()->route('homeuser');
                 }
 
             }else{
@@ -43,6 +43,7 @@ class GoogleController extends Controller
                 'email' => $google_user->email,
                 'social_id' => $google_user->id,
                 'social_type'=> 'google',
+                'role' => 'user',
                 'password' => encrypt('my-google')
             ]);
 

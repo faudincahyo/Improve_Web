@@ -8,7 +8,8 @@
 
 
     <title>@yield('title')</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/main/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main/app-dark.css') }}">
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.svg') }}" type="image/x-icon">
@@ -25,7 +26,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
                             <a href="/">
-                                <img src="{{ asset('assets/logo.png') }}" alt="Logo" srcset="" width="90">
+                                <img src="{{ asset('assets/SportZenth.png') }}" alt="Logo" srcset="" width="120">
                             </a>
                         </div>
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
@@ -90,7 +91,7 @@
                                     <div class="text">
                                         <h6 class="user-dropdown-name">{{ auth()->user()->name }}</h6>
                                         <p class="user-dropdown-status text-sm text-muted">
-                                            Member
+                                            Admin
                                         </p>
                                     </div>
                                 </a>
@@ -125,8 +126,7 @@
                         <p>2022 &copy; DPW Prodi Si</p>
                     </div>
                     <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart me-1"></i></span>Ojan
-                            Development</p>
+                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart me-1"></i></span>Faudin Cahyo Wijanarko</p>
                     </div>
                 </div>
             </footer>

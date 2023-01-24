@@ -35,7 +35,7 @@
         </li>
 
         <li class="sidebar-item {{ (request()->is('v1/cities')) ? 'active' : '' }}">
-            <a href="https://wa.me/6281912488040" target="__blank" class='sidebar-link'>
+            <a href="https://wa.me/62895324835376" target="__blank" class='sidebar-link'>
                 <i class="bi bi-star-fill"></i>
                 <span>Review Product</span>
             </a>
@@ -43,15 +43,15 @@
 
         <li class="sidebar-title">Tools Admin</li>
 
-        <li class="sidebar-item {{ (request()->is('v1/cities')) ? 'active' : '' }}">
-            <a href="https://wa.me/6281912488040" target="__blank" class='sidebar-link'>
+        <li class="sidebar-item {{ (request()->is('v1/list-user')) ? 'active' : '' }}">
+            <a href="{{ route('list.user') }}" target="__blank" class='sidebar-link'>
                 <i class="bi bi-person-lines-fill"></i>
                 <span>Daftar User</span>
             </a>
         </li>
 
         <li class="sidebar-item {{ (request()->is('v1/cities')) ? 'active' : '' }}">
-            <a href="https://wa.me/6281912488040" target="__blank" class='sidebar-link'>
+            <a href="https://wa.me/62895324835376" target="__blank" class='sidebar-link'>
                 <i class="bi bi-whatsapp"></i>
                 <span>Hubungi Author</span>
             </a>

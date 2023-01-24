@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,6 +15,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function listuser()
+    {
+        $data = User::query()->get();
+        return view('backend.product.listuser', compact('data'));
+    }
+
     public function index()
     {
         # membuat variabel untuk menampung data product

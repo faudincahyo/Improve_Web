@@ -7,7 +7,7 @@
 @section('content')
     <div class="col-md-4 col-11">
         <div class="card p-3 rounded shadow-sm">
-            <img src="{{ asset('assets/logo.png') }}" width="200" class="mx-auto mt-4" alt="">
+            <img src="{{ asset('assets/SportZenth.png') }}" width="200" class="mx-auto mt-4" alt="">
             <h3 class="text-center mt-4">Register Account</h3>
             <p class="fw-bold text-center">Create New Account</p>
             <form action="{{route('register')}}" method="POST">
